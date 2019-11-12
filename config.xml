@@ -1,20 +1,35 @@
-<?xml version="1.0" encoding="UTF-8"?>
-    <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-            id="cordova-plugin-device" version="0.2.3">
-        <name>Device</name>
-        <description>Cordova Device Plugin</description>
-        <license>Apache 2.0</license>
-        <keywords>cordova,device</keywords>
-        <js-module src="www/device.js" name="device">
-            <clobbers target="device" />
-        </js-module>
-        <platform name="ios">
-            <config-file target="config.xml" parent="/*">
-                <feature name="Device">
-                    <param name="ios-package" value="CDVDevice"/>
-                </feature>
-            </config-file>
-            <header-file src="src/ios/CDVDevice.h" />
-            <source-file src="src/ios/CDVDevice.m" />
-        </platform>
-    </plugin>
+<!DOCTYPE html> 
+<html>  
+    <head>    
+        <meta http-equiv="Content-type" content="text/html;      charset=utf-8">    
+        <meta name="viewport" id="viewport"      content="width=device-width, height=device-height,      initial-scale=1.0, maximum-scale=1.0,      user-scalable=no;" />    
+        
+        <script type="text/javascript" 
+        charset="utf-8"      
+        src="phonegap.js">
+        </script>
+    <script type="text/javascript" charset="utf-8">
+      
+        function onBodyLoad() {        
+            document.addEventListener("deviceready", onDeviceReady,        false);      
+        }
+      function onDeviceReady() {        
+          //Get the appInfo DOM element        
+          var element = document.getElementById('appInfo');        
+          //replace it with specific information about the device        
+          //running the application        
+          element.innerHTML = 'PhoneGap (version ' + device.cordova + ')<br />' + device.platform + ' ' + device.name + ' (version ' + device.version + ').';       }    
+        
+        
+        
+        </script>
+  </head>  
+    <body onload="onBodyLoad()">    
+        <center> <h1>HelloWorld3</h1> </center>   
+        <center><p>This is a PhoneGap application that makes calls to the PhoneGap APIs.</p></center>
+        <center><p id="appInfo">Waiting for PhoneGap Initialization to complete</p></center>
+       
+        <center> <h3>Ejemplo en PhoneGap.</h3> </center>
+        <center> <h2>Verónica Aguirre Frías y Mariana Judith Guerrero Moreno</h2> </center>
+    </body> 
+</html>
