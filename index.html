@@ -18,15 +18,17 @@
           var element = document.getElementById('appInfo');        
           //replace it with specific information about the device        
           //running the application        
-          element.innerHTML = 'PhoneGap (version ' + device.phonegap + ')<br />' + device.platform + ' ' + device.name + ' (version ' + device.version + ').';       }    
-        var string = device.platform;
+          element.innerHTML = 'PhoneGap (version ' + device.cordova + ')<br />' + device.platform + ' ' + device.name + ' (version ' + device.version + ').';       }    
+        
+        
+        
         </script>
   </head>  
     <body onload="onBodyLoad()">    
-        <center> <h1>HelloWorld3</h1> </center>
-        <center> <p var="string"></center>
+        <center> <h1>HelloWorld3</h1> </center>   
         <center><p>This is a PhoneGap application that makes calls to the PhoneGap APIs.</p></center>
         <center><p id="appInfo">Waiting for PhoneGap Initialization to complete</p></center>
+       
         <center> <h3>Ejemplo en PhoneGap.</h3> </center>
         <center> <h2>Verónica Aguirre Frías y Mariana Judith Guerrero Moreno</h2> </center>
     </body> 
